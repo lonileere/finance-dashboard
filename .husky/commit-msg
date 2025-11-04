@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Always lint the message Git writes here (robust for GUI/CLI/zsh)
+npx commitlint --edit 

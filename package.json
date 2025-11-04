@@ -5,6 +5,15 @@
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "*.{md,json,css}": [
+      "prettier -w"
+    ]
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,7 +24,8 @@
     "test": "jest",
     "test:e2e": "playwright test",
     "db:reset": "rimraf prisma/dev.db && pnpm prisma migrate dev -n init && pnpm prisma db seed",
-    "prisma:generate": "prisma generate"
+    "prisma:generate": "prisma generate",
+    "prepare": "husky"
   },
   "dependencies": {
     "@prisma/client": "^6.18.0",
@@ -29,6 +39,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.2",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@faker-js/faker": "^10.1.0",
     "@playwright/test": "^1.56.1",
     "@storybook/addon-a11y": "^10.0.3",
@@ -67,5 +79,8 @@
     "typescript": "^5",
     "vitest": "^4.0.6",
     "whatwg-fetch": "^3.6.20"
+  },
+  "volta": {
+    "node": "22.21.1"
   }
 }
