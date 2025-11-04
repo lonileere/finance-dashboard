@@ -2,4 +2,4 @@
 set -euo pipefail
 
 # Always lint the message Git writes here (robust for GUI/CLI/zsh)
-npx commitlint --edit 
+npx commitlint --edit .git/COMMIT_EDITMSG
