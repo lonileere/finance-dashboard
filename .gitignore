@@ -1,0 +1,100 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+############################
+# Dependencies / package managers
+############################
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+############################
+# Testing (Jest / Playwright)
+############################
+/coverage
+/playwright-report/
+/test-results/
+/.playwright
+.eslintcache
+
+############################
+# Next.js
+############################
+/\.next/
+/out/
+
+############################
+# Storybook
+############################
+storybook-static
+*storybook.log
+
+############################
+# Build artifacts
+############################
+/build
+/dist
+
+############################
+# Environment files
+############################
+# Commit example envs if you want by creating a non-secret template: .env.example
+.env*
+!.env.example
+
+############################
+# Vercel
+############################
+.vercel
+
+############################
+# Turbo (if used)
+############################
+.turbo
+
+############################
+# TypeScript
+############################
+*.tsbuildinfo
+next-env.d.ts
+
+############################
+# Prisma & local SQLite databases
+############################
+/prisma/*.db
+/prisma/*.sqlite
+/prisma/*.db-journal
+/prisma/*.db-shm
+/prisma/*.db-wal
+*.db
+*.sqlite
+*.db-journal
+*.db-shm
+*.db-wal
+
+############################
+# Logs
+############################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+############################
+# OS / Misc
+############################
+.DS_Store
+*.pem
+
+############################
+# IDE / Editor
+############################
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
