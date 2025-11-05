@@ -12,7 +12,7 @@ async function main() {
     })),
   });
   const catIds = (await db.category.findMany({ select: { id: true } })).map(
-    ({ id }) => id,
+    ({ id }: { id: number }) => id,
   );
 
   // Transactions
