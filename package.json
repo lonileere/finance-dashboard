@@ -21,7 +21,7 @@
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest",
+    "test": "jest -i",
     "test:e2e": "playwright test",
     "db:reset": "rimraf prisma/dev.db && pnpm prisma migrate dev -n init && pnpm prisma db seed",
     "prisma:generate": "prisma generate",

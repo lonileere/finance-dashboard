@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-pnpm test -i
+pnpm test
 pnpm lint-staged

@@ -11,7 +11,9 @@ async function main() {
       name,
     })),
   });
-  const catIds = (await db.category.findMany()).map((c) => c.id);
+  const catIds = (await db.category.findMany({ select: { id: true } })).map(
+    ({ id }) => id,
+  );
 
   // Transactions
   const tx = Array.from({ length: 3000 }).map(() => {
